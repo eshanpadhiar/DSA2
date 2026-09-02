@@ -42,7 +42,7 @@ class singlylinkedlist:
 					if current is None:
 							return 'Target element not found in the list'
 
-					new = current.next
+					new.next = current.next
 					current.next = new
 
 			def del_at_begin(self):
@@ -76,7 +76,7 @@ class singlylinkedlist:
 					return 'target element not found'
 				
 				prev.next = current.next
-				
+
 
 				
 
