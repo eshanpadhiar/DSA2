@@ -53,6 +53,9 @@ class singlylinkedlist:
 			def del_at_end(self):
 				if self.head == None:
 					return 'List is empty'
+				
+				if self.head.next == None:
+					self.head = None
 
 				current = self.head
 				prev = None
