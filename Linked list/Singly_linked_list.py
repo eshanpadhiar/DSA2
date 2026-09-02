@@ -62,5 +62,22 @@ class singlylinkedlist:
 
 				prev.next = None
 
+			def del_at_pos(self, target):
+				if self.head == None:
+					return 'List is Empty'
+
+				current = self.head
+				prev = None
+				while current is not None and current.data != target:
+					prev = current
+					current = current.next
+
+				if current is None:
+					return 'target element not found'
+				
+				prev.next = current.next
+				
+
+				
 
 				
