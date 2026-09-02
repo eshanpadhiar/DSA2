@@ -4,9 +4,13 @@ class node:
 					self.next = None
 
 class singlylinkedlist:
+			
+
 			def __init__(self):
 					self.head = None
 
+			def is_empty(self):
+				return self.head is None
 
 			def prepend(self, data):
 					new = node(data)
