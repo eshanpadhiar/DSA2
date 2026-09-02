@@ -45,7 +45,12 @@ class singlylinkedlist:
                        new = current.next
                        current.next = new
 
+               def del_at_begin(self):
+                       if self.head == None:
+                               return 'List is empty'
+                       self.head = self.head.next
+                       
                        
 
                        
-                               
+                              
