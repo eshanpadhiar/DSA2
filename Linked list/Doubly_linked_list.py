@@ -10,15 +10,23 @@ class doubly_linked_list:
                        self.tail = None
 
                 def is_empty(self):
-                        return self.head == 0
+                        return self.head is None or self.tail is None
 
                 def prepend(self, data):
                        new = node (data)
 
                        if self.is_empty():
-                               return 'List is empty'
+                               self.head = new
+                               self.tail = new
+                               return 
 
                        new.next = self.head
                        self.head.prev = new
                        self.head = new
+        
+
+                def append(self, data):
+                        new = node(data)
+                        if 
+                
                        
