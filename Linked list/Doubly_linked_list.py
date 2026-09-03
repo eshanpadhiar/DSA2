@@ -27,6 +27,14 @@ class doubly_linked_list:
 
                 def append(self, data):
                         new = node(data)
-                        if 
+
+                        if self.is_empty():
+                                self.head = new
+                                self.tail = new
+                                return
+
+                        self.tail.next = new
+                        new.prev = self.tail
+                        self.tail = new
                 
                        
