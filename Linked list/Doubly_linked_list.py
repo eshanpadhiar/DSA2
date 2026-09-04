@@ -43,13 +43,6 @@ class doubly_linked_list:
                         if self.is_empty():
                                 return 'List is empty'
 
-                        if self.head == self.tail:
-                                if self.head.data == target:
-                                        self.head.next = new
-                                        new.prev = self.head
-                                        self.tail = new
-                                        return
-                                
                         current = self.head
                         while current is not None and current.data != target:
                                 current = current.next
@@ -59,6 +52,10 @@ class doubly_linked_list:
 
                         new.prev = current
                         new.next = current.next
+
+                        if current.next.prev is not None:
+                                current.next.prev = new
+
                         current.next = new
 
                 
