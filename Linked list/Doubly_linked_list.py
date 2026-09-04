@@ -44,19 +44,28 @@ class doubly_linked_list:
                                 return 'List is empty'
 
                         current = self.head
+
                         while current is not None and current.data != target:
                                 current = current.next
 
                         if current is None:
                                 return ' Target elemnet not found in the list'
 
+
                         new.prev = current
                         new.next = current.next
 
-                        if current.next.prev is not None:
+
+                        if current.next is not None:
                                 current.next.prev = new
 
+                        else:
+                                self.tail = new
+
+
                         current.next = new
+
+
 
                 
 
