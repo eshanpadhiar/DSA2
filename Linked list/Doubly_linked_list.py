@@ -66,6 +66,26 @@ class doubly_linked_list:
                         current.next = new
 
 
+                def del_at_begin(self):
+
+                        if self.head == None:
+                                return 'List is empty'
+
+                        if self.head == self.tail:
+                                self.head = None
+                                self.tail = None
+                                return
+                        
+                        self.head = self.head.next
+                        self.head.prev = None
+
+                
+
+
+
+                
+
+
 
                 
 
