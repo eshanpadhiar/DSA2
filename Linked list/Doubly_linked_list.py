@@ -36,5 +36,37 @@ class doubly_linked_list:
                         self.tail.next = new
                         new.prev = self.tail
                         self.tail = new
+
+                def insert_after_pos(self, data, target):
+                        new = node(data)
+
+                        if self.is_empty():
+                                return 'List is empty'
+
+                        if self.head == self.tail:
+                                if self.head.data == target:
+                                        self.head.next = new
+                                        new.prev = self.head
+                                        self.tail = new
+                                        return
+                                
+                        current = self.head
+                        while current is not None and current.data != target:
+                                current = current.next
+
+                        if current is None:
+                                return ' Target elemnet not found in the list'
+
+                        new.prev = current
+                        new.next = current.next
+                        current.next = new
+
+                
+
+
+
+                                
+
+                
                 
                        
